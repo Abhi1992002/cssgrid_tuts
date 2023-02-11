@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <title>CSS Grid Alignment + Centering!</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="itm itm1">1</div>
+    <div class="itm itm2">2</div>
+    <div class="itm itm3">3</div>
+    <div class="itm itm4">4</div>
+    <div class="itm itm5">5</div>
+    <div class="itm itm6">6</div>
+    <div class="itm itm7">7</div>
+    <div class="itm itm8">8</div>
+    <div class="itm itm9">9</div>
+    <div class="itm itm10">10</div>
+    
+  </div>
+
+  <style>
+    /* to align item in center */
+    /* 
+    centering the items inside a span
+      justify-items:
+      align-items:
+    centering the items inside container (whole block of grid => centered)
+      justify-content:
+      align-content:
+ 
+    for inidividual item with respect to container
+      align-self:
+      justify-self:
+
+      justify-* is row axis => left to right
+      align-* is column axis => top to bottom
+    */
+
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(5, 100px);
+      grid-template-rows: repeat(5,100px);
+       border: 10px solid blue;
+      /* justify-items: center;
+      align-items: center; */
+      /* place-items: stretch stretch; shortcut for above 2 properties */
+      justify-content: center;
+      /* space around , space-between ,stretch */
+
+      align-content: center;
+      /* kuch farak nahi padega  isse jab tak height nahi dega */
+    }
+    .itm{
+      /* to center contetn inside element */
+      /* display: grid;
+      align-items: center;
+      justify-content: center; */
+      background-color: white;
+    }
+    .itm5{
+      justify-self: center;
+    }
+  </style>
+</body>
+
+</html>
